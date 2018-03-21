@@ -1,0 +1,106 @@
+body{
+	background:rgba(240,240,240,0.5);
+	color:#222;
+	font-family: 'Montserrat', sans-serif, Arial;
+}
+h1,h2,h3,h4,h5{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	}
+	h3{
+		background:#FFFF00;
+		}
+/* un comentario en CSS se escribe de esta manera */
+
+a{color:rgba(0,0,0,1);text-decoration: none;}
+a:hover{color:#2ECCFA;text-decoration: underline;}
+
+:hover{transition:  ease all 1s;}
+
+nav {
+		padding:0.25rem;
+}
+nav ol li {
+	font-size: 120%;
+	padding:0.5rem 0;
+}
+
+div.container{
+	margin:2rem;
+	position: relative;
+}
+
+h2{
+	transform: translate(0, -10px) rotate(180deg); /*si no lo trasladara me quedaría más abajo*/
+	position:absolute; /*este absoluto funciona porq está en relación al container */
+	right:0;
+	top:0;
+}
+
+@media screen and (max-width: 1024px){
+	h2{
+		display:none;
+		} /*si la pantalla no tiene el espacio suficiente q entonces desaparexca el h2*/
+}
+
+@keyframes espaciado { /*para la animación, que en un ppio de la animacion se así y al final de otra forma*/
+	from {letter-spacing: 0.01rem;color: yellow;}
+	to {letter-spacing: 0.1rem;color: grey;}
+}
+
+h4:hover { /*cuando el mouse está encima pasa esto*/
+	animation-name: espaciado;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+figure{
+	background:rgba(255,255,255,.9);
+	padding:0.5rem;
+	margin:1rem 0 2rem 0; /*relacionar estos valores a la posicion de las manecillas del reloj*/
+	box-shadow: 0 0 3px rgba(0,0,0,0); /*MARCO DE LA FOTOOOO*/
+}
+
+figure img{
+	width: 50%;
+	height:auto;
+	-webkit-filter: hue-rotate(0); /* Safari 6.0 - 9.0 */
+  filter: hue-rotate(0);
+}
+
+figure img:hover{
+	width: 100%;
+	height:auto;
+	-webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
+    filter: invert(100%);
+}
+
+figcaption{
+	padding:0.5rem;
+	font-size: 90%;
+	letter-spacing: 0.01rem;
+}
+
+hr{
+	border:3px solid #ddd;
+}
+
+svg{
+	border:5px solid #fff;
+}
+
+s, del{ /*tanto en eso como en eso: eso quiere decir la "coma," */
+	background:rgba(0,0,0,.8);
+	color:rgba(0,0,0,1);
+	text-decoration: none;
+}
+
+ins{
+	font-weight: bold;
+	text-decoration: none;
+}
+
+p:first-child {
+color:#2ECCFA;
+}
